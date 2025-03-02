@@ -30,7 +30,7 @@ MESSAGE_TIMES = [
 ]
 
 
-
+"""
 document = {
     "Book I: Providence": [
         {
@@ -427,7 +427,7 @@ def write_to_csv(document, filename):
 
 # Write to CSV
 write_to_csv(document, "sacred_scrolls.csv")
-
+"""
 
 # Load the CSV into a pandas DataFrame
 df = pd.read_csv(r"C:\whid\sacred_scrolls.csv")
