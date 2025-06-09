@@ -536,10 +536,10 @@ async def on_ready():
     for guild in bot.guilds:
         channel = discord.utils.get(guild.text_channels, name=TARGET_CHANNEL_NAME)
         if channel is None:
-            logging.DEBUG(f"'{TARGET_CHANNEL_NAME}' not found in '{guild.name}'. Creating it...")
+            logging.debug(f"'{TARGET_CHANNEL_NAME}' not found in '{guild.name}'. Creating it...")
             # Create the channel (requires Manage Channels permission)
             await guild.create_text_channel(TARGET_CHANNEL_NAME)
-            logging.DEBUG(f"Created channel '{TARGET_CHANNEL_NAME}' in '{guild.name}'")
+            logging.debug(f"Created channel '{TARGET_CHANNEL_NAME}' in '{guild.name}'")
 
     # Start the daily verse task if it's not already running
     if not send_daily_verse.is_running():
