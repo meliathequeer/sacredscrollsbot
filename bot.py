@@ -520,10 +520,10 @@ async def send_daily_verse():
 
                  # Send the message to the channel
                 await channel.send(message)
-                await asyncio.sleep(60)
                 
                 logging.info(f"Sent verse at {now} to channel '{channel.name}' in guild '{guild.name}'")
 
+            await asyncio.sleep(60)
             # No need for return, continue to check other servers after sending
             break  # Exit the loop after sending the verse at the correct time
 
